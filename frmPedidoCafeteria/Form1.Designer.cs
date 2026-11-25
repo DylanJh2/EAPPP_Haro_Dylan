@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewGroup listViewGroup1 = new ListViewGroup("ListViewGroup", HorizontalAlignment.Left);
-            ListViewItem listViewItem1 = new ListViewItem(new string[] { "Empanada de queso", "$1.25" }, -1);
-            ListViewItem listViewItem2 = new ListViewItem(new string[] { "Sánduche de pollo", "$2.50" }, -1);
-            ListViewItem listViewItem3 = new ListViewItem(new string[] { "Bolón de verde mixto $", "$2.25" }, -1);
-            ListViewItem listViewItem4 = new ListViewItem(new string[] { "Humita tradicional", "$1.50" }, -1);
-            ListViewItem listViewItem5 = new ListViewItem(new string[] { " Tostada con queso", "$1.00" }, -1);
-            ListViewItem listViewItem6 = new ListViewItem(new string[] { "Café pasado", "$0.85" }, -1);
-            ListViewItem listViewItem7 = new ListViewItem(new string[] { "Jugo natural (naranja/mora)", "$1.50" }, -1);
-            ListViewItem listViewItem8 = new ListViewItem(new string[] { "Batido de fruta", "$2.00" }, -1);
-            ListViewItem listViewItem9 = new ListViewItem(new string[] { "Botella de agua", "$0.75" }, -1);
+            ListViewGroup listViewGroup2 = new ListViewGroup("ListViewGroup", HorizontalAlignment.Left);
+            ListViewItem listViewItem10 = new ListViewItem(new string[] { "Empanada de queso", "$1.25" }, -1);
+            ListViewItem listViewItem11 = new ListViewItem(new string[] { "Sánduche de pollo", "$2.50" }, -1);
+            ListViewItem listViewItem12 = new ListViewItem(new string[] { "Bolón de verde mixto $", "$2.25" }, -1);
+            ListViewItem listViewItem13 = new ListViewItem(new string[] { "Humita tradicional", "$1.50" }, -1);
+            ListViewItem listViewItem14 = new ListViewItem(new string[] { " Tostada con queso", "$1.00" }, -1);
+            ListViewItem listViewItem15 = new ListViewItem(new string[] { "Café pasado", "$0.85" }, -1);
+            ListViewItem listViewItem16 = new ListViewItem(new string[] { "Jugo natural (naranja/mora)", "$1.50" }, -1);
+            ListViewItem listViewItem17 = new ListViewItem(new string[] { "Batido de fruta", "$2.00" }, -1);
+            ListViewItem listViewItem18 = new ListViewItem(new string[] { "Botella de agua", "$0.75" }, -1);
             lvCatalogo = new ListView();
             Producto = new ColumnHeader();
             Precio = new ColumnHeader();
@@ -54,14 +54,14 @@
             chkServilletas = new CheckBox();
             chkPostre = new CheckBox();
             listView1 = new ListView();
+            ProducD = new ColumnHeader();
+            CantD = new ColumnHeader();
+            Subtotal = new ColumnHeader();
             btnAgregar = new Button();
             btnQuitar = new Button();
             btnLimpiar = new Button();
             lblEstado = new Label();
             lblTotal = new Label();
-            ProducD = new ColumnHeader();
-            CantD = new ColumnHeader();
-            Subtotal = new ColumnHeader();
             gbatencion.SuspendLayout();
             gbextras.SuspendLayout();
             SuspendLayout();
@@ -71,14 +71,15 @@
             lvCatalogo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lvCatalogo.Columns.AddRange(new ColumnHeader[] { Producto, Precio });
             lvCatalogo.FullRowSelect = true;
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            lvCatalogo.Groups.AddRange(new ListViewGroup[] { listViewGroup1 });
-            listViewItem1.Tag = "Empanada de queso";
-            lvCatalogo.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6, listViewItem7, listViewItem8, listViewItem9 });
-            lvCatalogo.Location = new Point(25, 35);
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.Name = "listViewGroup1";
+            lvCatalogo.Groups.AddRange(new ListViewGroup[] { listViewGroup2 });
+            listViewItem10.Tag = "Empanada de queso";
+            lvCatalogo.Items.AddRange(new ListViewItem[] { listViewItem10, listViewItem11, listViewItem12, listViewItem13, listViewItem14, listViewItem15, listViewItem16, listViewItem17, listViewItem18 });
+            lvCatalogo.Location = new Point(29, 47);
+            lvCatalogo.Margin = new Padding(3, 4, 3, 4);
             lvCatalogo.Name = "lvCatalogo";
-            lvCatalogo.Size = new Size(221, 259);
+            lvCatalogo.Size = new Size(252, 344);
             lvCatalogo.TabIndex = 0;
             lvCatalogo.UseCompatibleStateImageBehavior = false;
             lvCatalogo.View = View.Details;
@@ -97,50 +98,56 @@
             // lblcliente
             // 
             lblcliente.AutoSize = true;
-            lblcliente.Location = new Point(311, 52);
+            lblcliente.Location = new Point(355, 69);
             lblcliente.Name = "lblcliente";
-            lblcliente.Size = new Size(47, 15);
+            lblcliente.Size = new Size(58, 20);
             lblcliente.TabIndex = 1;
             lblcliente.Text = "Cliente:";
             // 
             // txtCliente
             // 
-            txtCliente.Location = new Point(364, 49);
+            txtCliente.Location = new Point(416, 65);
+            txtCliente.Margin = new Padding(3, 4, 3, 4);
             txtCliente.Name = "txtCliente";
-            txtCliente.Size = new Size(100, 23);
+            txtCliente.Size = new Size(114, 27);
             txtCliente.TabIndex = 2;
             // 
             // lblproducto
             // 
             lblproducto.AutoSize = true;
-            lblproducto.Location = new Point(299, 86);
+            lblproducto.Location = new Point(342, 115);
             lblproducto.Name = "lblproducto";
-            lblproducto.Size = new Size(59, 15);
+            lblproducto.Size = new Size(72, 20);
             lblproducto.TabIndex = 3;
             lblproducto.Text = "Producto:";
             // 
             // txtProducto
             // 
-            txtProducto.Location = new Point(364, 83);
+            txtProducto.Location = new Point(416, 111);
+            txtProducto.Margin = new Padding(3, 4, 3, 4);
             txtProducto.Name = "txtProducto";
             txtProducto.ReadOnly = true;
-            txtProducto.Size = new Size(100, 23);
+            txtProducto.Size = new Size(114, 27);
             txtProducto.TabIndex = 4;
+            txtProducto.TextChanged += txtProducto_TextChanged;
             // 
             // txtCantidad
             // 
-            txtCantidad.Location = new Point(524, 83);
+            txtCantidad.Location = new Point(599, 111);
+            txtCantidad.Margin = new Padding(3, 4, 3, 4);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(100, 23);
+            txtCantidad.Size = new Size(114, 27);
             txtCantidad.TabIndex = 5;
             txtCantidad.Text = "1";
+            txtCantidad.TextChanged += txtCantidad_TextChanged;
+            txtCantidad.Validating += txtCantidad_Validating;
             // 
             // lblcantidad
             // 
             lblcantidad.AutoSize = true;
-            lblcantidad.Location = new Point(488, 87);
+            lblcantidad.Location = new Point(558, 116);
             lblcantidad.Name = "lblcantidad";
-            lblcantidad.Size = new Size(32, 15);
+            lblcantidad.Size = new Size(39, 20);
             lblcantidad.TabIndex = 6;
             lblcantidad.Text = "Cant";
             // 
@@ -148,9 +155,11 @@
             // 
             gbatencion.Controls.Add(rbtnEntrega);
             gbatencion.Controls.Add(rbtnMostrador);
-            gbatencion.Location = new Point(308, 130);
+            gbatencion.Location = new Point(352, 231);
+            gbatencion.Margin = new Padding(3, 4, 3, 4);
             gbatencion.Name = "gbatencion";
-            gbatencion.Size = new Size(325, 74);
+            gbatencion.Padding = new Padding(3, 4, 3, 4);
+            gbatencion.Size = new Size(432, 99);
             gbatencion.TabIndex = 7;
             gbatencion.TabStop = false;
             gbatencion.Text = "Modalidad de atencion ";
@@ -158,21 +167,24 @@
             // rbtnEntrega
             // 
             rbtnEntrega.AutoSize = true;
-            rbtnEntrega.Location = new Point(168, 31);
+            rbtnEntrega.Location = new Point(211, 41);
+            rbtnEntrega.Margin = new Padding(3, 4, 3, 4);
             rbtnEntrega.Name = "rbtnEntrega";
             rbtnEntrega.RightToLeft = RightToLeft.No;
-            rbtnEntrega.Size = new Size(152, 19);
+            rbtnEntrega.Size = new Size(192, 24);
             rbtnEntrega.TabIndex = 1;
             rbtnEntrega.TabStop = true;
             rbtnEntrega.Text = "Entraga en aula (+$0.50)";
             rbtnEntrega.UseVisualStyleBackColor = true;
+            rbtnEntrega.CheckedChanged += rbtnEntrega_CheckedChanged;
             // 
             // rbtnMostrador
             // 
             rbtnMostrador.AutoSize = true;
-            rbtnMostrador.Location = new Point(20, 31);
+            rbtnMostrador.Location = new Point(23, 41);
+            rbtnMostrador.Margin = new Padding(3, 4, 3, 4);
             rbtnMostrador.Name = "rbtnMostrador";
-            rbtnMostrador.Size = new Size(142, 19);
+            rbtnMostrador.Size = new Size(179, 24);
             rbtnMostrador.TabIndex = 0;
             rbtnMostrador.TabStop = true;
             rbtnMostrador.Text = "Retiro en el mostrador";
@@ -182,9 +194,11 @@
             // 
             gbextras.Controls.Add(chkServilletas);
             gbextras.Controls.Add(chkPostre);
-            gbextras.Location = new Point(308, 210);
+            gbextras.Location = new Point(352, 338);
+            gbextras.Margin = new Padding(3, 4, 3, 4);
             gbextras.Name = "gbextras";
-            gbextras.Size = new Size(306, 76);
+            gbextras.Padding = new Padding(3, 4, 3, 4);
+            gbextras.Size = new Size(432, 101);
             gbextras.TabIndex = 8;
             gbextras.TabStop = false;
             gbextras.Text = "Extras del pedido";
@@ -192,78 +206,38 @@
             // chkServilletas
             // 
             chkServilletas.AutoSize = true;
-            chkServilletas.Location = new Point(168, 41);
+            chkServilletas.Location = new Point(236, 55);
+            chkServilletas.Margin = new Padding(3, 4, 3, 4);
             chkServilletas.Name = "chkServilletas";
-            chkServilletas.Size = new Size(134, 19);
+            chkServilletas.Size = new Size(167, 24);
             chkServilletas.TabIndex = 1;
             chkServilletas.Text = "Servilletas/Cubiertos";
             chkServilletas.UseVisualStyleBackColor = true;
+            chkServilletas.CheckedChanged += chkServilletas_CheckedChanged;
             // 
             // chkPostre
             // 
             chkPostre.AutoSize = true;
-            chkPostre.Location = new Point(21, 41);
+            chkPostre.Location = new Point(18, 55);
+            chkPostre.Margin = new Padding(3, 4, 3, 4);
             chkPostre.Name = "chkPostre";
-            chkPostre.Size = new Size(146, 19);
+            chkPostre.Size = new Size(184, 24);
             chkPostre.TabIndex = 0;
             chkPostre.Text = "Postre del dia (+ $1.00)";
             chkPostre.UseVisualStyleBackColor = true;
+            chkPostre.CheckedChanged += chkPostre_CheckedChanged;
             // 
             // listView1
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { ProducD, CantD, Subtotal });
-            listView1.Location = new Point(61, 335);
+            listView1.Location = new Point(31, 447);
+            listView1.Margin = new Padding(3, 4, 3, 4);
             listView1.Name = "listView1";
-            listView1.Size = new Size(496, 88);
+            listView1.Size = new Size(566, 116);
             listView1.TabIndex = 9;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
-            // 
-            // btnAgregar
-            // 
-            btnAgregar.Location = new Point(311, 292);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(75, 23);
-            btnAgregar.TabIndex = 10;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
-            // 
-            // btnQuitar
-            // 
-            btnQuitar.Location = new Point(400, 292);
-            btnQuitar.Name = "btnQuitar";
-            btnQuitar.Size = new Size(75, 23);
-            btnQuitar.TabIndex = 11;
-            btnQuitar.Text = "Quitar";
-            btnQuitar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.Location = new Point(488, 292);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(75, 23);
-            btnLimpiar.TabIndex = 12;
-            btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // lblEstado
-            // 
-            lblEstado.AutoSize = true;
-            lblEstado.Location = new Point(61, 426);
-            lblEstado.Name = "lblEstado";
-            lblEstado.Size = new Size(38, 15);
-            lblEstado.TabIndex = 13;
-            lblEstado.Text = "label1";
-            // 
-            // lblTotal
-            // 
-            lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(134, 426);
-            lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(38, 15);
-            lblTotal.TabIndex = 14;
-            lblTotal.Text = "label1";
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // ProducD
             // 
@@ -279,11 +253,62 @@
             Subtotal.Text = "Subtotal";
             Subtotal.Width = 100;
             // 
+            // btnAgregar
+            // 
+            btnAgregar.Location = new Point(355, 181);
+            btnAgregar.Margin = new Padding(3, 4, 3, 4);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(86, 31);
+            btnAgregar.TabIndex = 10;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
+            // 
+            // btnQuitar
+            // 
+            btnQuitar.Location = new Point(486, 181);
+            btnQuitar.Margin = new Padding(3, 4, 3, 4);
+            btnQuitar.Name = "btnQuitar";
+            btnQuitar.Size = new Size(86, 31);
+            btnQuitar.TabIndex = 11;
+            btnQuitar.Text = "Quitar";
+            btnQuitar.UseVisualStyleBackColor = true;
+            btnQuitar.Click += btnQuitar_Click;
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Location = new Point(616, 181);
+            btnLimpiar.Margin = new Padding(3, 4, 3, 4);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(86, 31);
+            btnLimpiar.TabIndex = 12;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
+            // lblEstado
+            // 
+            lblEstado.AutoSize = true;
+            lblEstado.Location = new Point(31, 571);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(50, 20);
+            lblEstado.TabIndex = 13;
+            lblEstado.Text = "label1";
+            // 
+            // lblTotal
+            // 
+            lblTotal.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotal.Location = new Point(705, 477);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(175, 44);
+            lblTotal.TabIndex = 14;
+            lblTotal.Text = "label1";
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(lblTotal);
             Controls.Add(lblEstado);
             Controls.Add(btnLimpiar);
@@ -299,8 +324,10 @@
             Controls.Add(txtCliente);
             Controls.Add(lblcliente);
             Controls.Add(lvCatalogo);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             gbatencion.ResumeLayout(false);
             gbatencion.PerformLayout();
             gbextras.ResumeLayout(false);
